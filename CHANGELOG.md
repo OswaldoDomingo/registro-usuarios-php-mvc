@@ -27,3 +27,8 @@
 - Sanitización de entradas con `htmlspecialchars()` y `filter_var()`
 - Estilizado con Bootstrap y CSS
 - Documentación completada (README, changelog)
+
+## [Mejora] - Control de acceso seguro a `registroExito.php`
+- Implementada validación con `$_SESSION['registro_exito']`
+- Redirección automática al formulario si no se ha completado el registro
+- Añadido unset para limpiar datos tras mostrar la página de éxito

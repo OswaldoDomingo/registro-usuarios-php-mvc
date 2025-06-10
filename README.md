@@ -84,6 +84,13 @@ registro-usuarios-php-mvc/
 - Validación con JavaScript
 - Login y autenticación de sesión
 - Edición y borrado de usuarios
+- Protección contra acceso directo a páginas como `registroExito.php` mediante sesión
+
+## 🆕 Mejoras recientes
+
+- Añadido control de acceso en `registroExito.php` para impedir visitas directas sin haber pasado por el formulario
+
+
 
 ## 👨‍💻 Autor
 
