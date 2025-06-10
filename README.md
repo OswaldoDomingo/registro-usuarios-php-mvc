@@ -38,26 +38,61 @@ registro-usuarios-php-mvc/
 └── .gitignore         # Archivos ignorados por Git
 ```
 
-## 📅 Plan de trabajo (5 días)
+## ✅ Estado del proyecto
 
-1. **Día 1:** Estructura base MVC + formulario HTML con Bootstrap  
-2. **Día 2:** Validaciones del registro y página de éxito  
-3. **Día 3:** Escritura y lectura en fichero `.txt`  
-4. **Día 4:** Implementación con base de datos MySQL  
-5. **Día 5:** Mejora visual, sanitización y documentación  
+### 🧾 `view/` (Formularios y páginas visibles)
 
-## 🧪 Funcionalidades implementadas
+- ✅ Formulario de registro simple (`registroHTML.php`)
+    - Campos: nombre, correo electrónico
+    - Interfaz con HTML y Bootstrap
+    - Mensajes de error visibles
+- ✅ Página de éxito tras el registro (`registroExito.php`)
+- 🟡 Mejora del formulario con doble entrada de correo y contraseña
+- 🔜 Validación visual en cliente con JavaScript
+- 🟡 Feedback visual con Bootstrap (mensajes, colores, etc.)
+- 🔜 Vista para consultar usuarios registrados
 
-- Validación de:
-  - Nombre
-  - Correo electrónico (y verificación)
-  - Contraseña (y confirmación)
-- Almacenamiento de datos en:
-  - Fichero plano (`usuarios.txt`)
-  - Base de datos MySQL (`registro_usuarios`)
-- Consulta de usuarios registrados
-- Feedback visual con Bootstrap
-- Código organizado en carpetas MVC
+---
+
+### 🧠 `controller/` (Procesamiento y lógica del registro)
+
+- ✅ Recepción de datos desde formulario (`registroFormulario.php`)
+- ✅ Validación de campos:
+    - Nombre (longitud, caracteres válidos)
+    - Correo electrónico (formato, unicidad)
+- ✅ Sanitización de datos recibidos
+- ✅ Control de acceso a la página de éxito (evitar acceso directo)
+- 🟡 Comprobación de correos repetidos en fichero
+- 🔜 Validación cruzada de doble correo y contraseña
+- 🔜 Escritura y lectura de usuarios en fichero `.txt`
+- 🔜 Persistencia de datos en base de datos MySQL
+- 🔜 Consulta, edición y borrado de usuarios registrados
+- 🔜 Gestión de sesiones para login y autenticación
+
+---
+
+### 🎨 `public/` (Recursos visuales y estáticos)
+
+- ✅ Estilos personalizados con CSS
+- ✅ Bootstrap 5 incluido desde CDN
+- 🔜 Archivos JS para validación en cliente
+- 🔜 Mejora del diseño visual general (formularios, mensajes, botones)
+
+## 🆕 Mejoras recientes
+
+- Añadido control de acceso en `registroExito.php` para impedir visitas directas sin haber pasado por el formulario
+
+
+
+## 📅 Plan de trabajo
+
+1. Estructura base MVC + formulario HTML con Bootstrap  
+2. Validaciones del registro y página de éxito  
+3. Escritura y lectura en fichero `.txt`  
+4. Implementación con base de datos MySQL  
+5. Mejora visual, sanitización y documentación  
+
+
 
 ## 🧰 Cómo usar
 
@@ -76,19 +111,6 @@ registro-usuarios-php-mvc/
    ```
    http://localhost/registro-usuarios-php-mvc
    ```
-
-## ✅ Estado del proyecto
-
-✔️ Funcionalidad de registro y consulta terminada  
-🔧 Próximas mejoras posibles:
-- Validación con JavaScript
-- Login y autenticación de sesión
-- Edición y borrado de usuarios
-- Protección contra acceso directo a páginas como `registroExito.php` mediante sesión
-
-## 🆕 Mejoras recientes
-
-- Añadido control de acceso en `registroExito.php` para impedir visitas directas sin haber pasado por el formulario
 
 
 
