@@ -2,7 +2,10 @@
 session_start();
 $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : '';
 $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : '';
-
+if (!isset($_SESSION['registro_exito'])) {
+    header('Location: registroHtml.php');
+    exit();
+}
 
 ?>
 
@@ -21,5 +24,11 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : '';
     <p>Hola, <?php echo htmlspecialchars($nombre); ?>. Tu correo electrónico es: <?php echo htmlspecialchars($correo); ?>.</p>
     <p>¡Gracias por regresar!</p>
     <a href="registroHTML.php" class="btn btn-primary">Volver a registrar</a>
+
+    <?php
+        unset($_SESSION['registro_exito']);
+        unset($_SESSION['nombre']);
+        unset($_SESSION['correo']);
+    ?>
 </body>
 </html>

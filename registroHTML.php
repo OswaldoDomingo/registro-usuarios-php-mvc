@@ -2,9 +2,9 @@
 ob_start(); // Inicia buffer de salida
 session_start();
 //registroHTML.php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 include_once 'controller/registroProcesar.php';
 
@@ -25,6 +25,7 @@ if(isset($_POST['enviar'])){
         if (empty($error)) {
             $_SESSION['nombre'] = $nombre;
             $_SESSION['correo'] = $correo;
+            $_SESSION['registro_exito'] = true;
             header('Location: registroExito.php');
             exit();
         }
