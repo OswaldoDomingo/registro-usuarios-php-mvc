@@ -1,0 +1,53 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        h1{
+            color: #fff;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"]{
+            width:100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 15px;
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        hr {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            width: 600px;
+            text-align: center;
+        }
+        select {
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .error {
+            color: red !important;
+            font-weight: bold !important;
+        }
