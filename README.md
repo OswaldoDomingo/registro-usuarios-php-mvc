@@ -29,13 +29,13 @@ registro-usuarios-php-mvc/
 ├── view/              # Formularios y vistas HTML
 ├── core/              # Funciones auxiliares reutilizables
 ├── data/              # Archivos de datos (como usuarios.txt)
-├── assets/            # Estilos CSS y otros recursos estáticos
-│
-├── index.php          # Punto de entrada
-├── README.md
-├── CHANGELOG.md
-├── progreso.md
-└── .gitignore
+├── public/            # Estilos CSS y otros recursos estáticos
+├── registroHTML.php   # Formulario de registro HTML
+├── registroExito.php  # Página de éxito tras el registro
+├── README.md          # Documentación del proyecto
+├── CHANGELOG.md       # Historial de cambios
+├── progreso.md        # Plan de trabajo y progreso
+└── .gitignore         # Archivos ignorados por Git
 ```
 
 ## 📅 Plan de trabajo (5 días)
