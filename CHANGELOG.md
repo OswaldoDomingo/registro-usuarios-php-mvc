@@ -28,3 +28,11 @@
 - Conexión con base de datos MySQL.
 - Gestión de sesiones, login, edición y borrado de usuarios.
 - Validación en cliente con JavaScript.
+
+## [0.1.1] - 2025-06-10
+## [Mejora] - Añadido flujo de login
+
+- Formulario de login en `registroLogin.php`
+- Procesamiento de credenciales en `loginProcesar.php`
+- Página de éxito tras login (`loginExito.php`)
+- Gestión de errores y mensajes

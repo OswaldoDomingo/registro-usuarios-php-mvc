@@ -2,3 +2,4 @@ docs/
 controller/bd.php
 controller/controller.php
 .idea/
+config/

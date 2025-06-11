@@ -4,6 +4,7 @@ function recoge($var){
         ? strip_tags(trim(preg_replace('/ +/', ' ', $_REQUEST[$var])))
         : '';
 }
+
 function validarNombre ($var){
     return strlen($var) >= 3;
 }
@@ -12,32 +13,26 @@ function validarCorreo($correo) {
     return filter_var($correo, FILTER_VALIDATE_EMAIL);
 }
 
-function correoRegistrado($correo, $listadoCorreos) {
-    return in_array($correo, $listadoCorreos);
+//Comprobar si el correo está registrado en $usuarios
+function correoRegistrado($correo, $usuarios) {
+    $nombresUsuarios = array_keys($usuarios);
+
+        return in_array($correo, $nombresUsuarios);
 }
 
-$listadoCorreos = [
-    'oswaldomingo@gmail.com',
-    'juan.perez@email.com',
-    'maria.lopez@email.com',
-    'carlos.garcia@email.com',
-    'ana.martin@email.com',
-    'david.rodriguez@email.com',
-    'laura.fernandez@email.com',
-    'javier.gomez@email.com',
-    'sofia.diaz@email.com',
-    'miguel.sanchez@email.com',
-    'elena.ruiz@email.com',
-    'pedro.torres@email.com',
-    'isabel.jimenez@email.com',
-    'pablo.moreno@email.com',
-    'cristina.alonso@email.com',
-    'sergio.gutierrez@email.com',
-    'marta.hernandez@email.com',
-    'raul.navarro@email.com',
-    'irene.ortega@email.com',
-    'alejandro.ramos@email.com',
-    'beatriz.castro@email.com'
-];
-                
+//Comprobar si los dos correos son iguales
+function correosIguales($correo, $correoRepetido) {
+    return $correo === $correoRepetido;
+}
+ // Comprobar si las dos contraseñas son iguales
+function contrasenyasIguales($claveAcceso, $claveAccesoRepetida) {
+    return $claveAcceso === $claveAccesoRepetida;
+}
+
+
+
+
+
+
+
 ?>

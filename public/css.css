@@ -24,6 +24,8 @@ body {
             padding: 8px;
             margin: 10px 0;
             box-sizing: border-box;
+            border-radius:5px;
+            border: 1px solid #ccc;
         }
         input[type="submit"],
         input[type="reset"] {
@@ -50,4 +52,11 @@ body {
         .error {
             color: red !important;
             font-weight: bold !important;
+        }
+        a {
+            color: #000 !important;
+
+        }
+        .centrado {
+            text-align: center;
         }

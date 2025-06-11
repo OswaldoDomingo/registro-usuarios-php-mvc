@@ -22,20 +22,20 @@ Sistema básico de registro de usuarios desarrollado con PHP siguiendo una estru
 ## 📂 Estructura del proyecto
 
 ```
-registro-usuarios-php-mvc/
-│
-├── controller/        # Lógica de control
-├── model/             # Clases y gestión de datos (ficheros y BD)
-├── view/              # Formularios y vistas HTML
-├── core/              # Funciones auxiliares reutilizables
-├── data/              # Archivos de datos (como usuarios.txt)
-├── public/            # Estilos CSS y otros recursos estáticos
-├── registroHTML.php   # Formulario de registro HTML
-├── registroExito.php  # Página de éxito tras el registro
-├── README.md          # Documentación del proyecto
-├── CHANGELOG.md       # Historial de cambios
-├── progreso.md        # Plan de trabajo y progreso
-└── .gitignore         # Archivos ignorados por Git
+/
+├── controller/
+│   └── registroProcesar.php
+│   └── loginProcesar.php
+├── model/
+│   └── Usuario.php       ←clase para manejar usuarios
+├── view/
+│   └── registroFormulario.php
+│   └── registroFormularioLogin.php
+├── public/
+│   └── css.css
+├── registroHTML.php      ← muestra el formulario de registro
+├── registroLogin.php     ← muestra el formulario de login
+├── registroExito.php     ← muestra mensaje tras registro
 ```
 
 ## ✅ Estado del proyecto
@@ -51,6 +51,9 @@ registro-usuarios-php-mvc/
 - 🔜 Validación visual en cliente con JavaScript
 - 🟡 Feedback visual con Bootstrap (mensajes, colores, etc.)
 - 🔜 Vista para consultar usuarios registrados
+- Implementado sistema básico de login con formulario y validación
+- Página de éxito para login (`loginExito.php`)
+- Control de sesión para evitar acceso no autorizado
 
 ---
 
